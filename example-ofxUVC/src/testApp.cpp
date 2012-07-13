@@ -3,12 +3,18 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 	vidGrabber.initGrabber(1280/2, 720/2);
-        
-    uvcControl.useCamera(0x045e,0x779);
+    
+    // Built-in iSight
+    //uvcControl.useCamera(0x5ac,0x8507, 0x02);
+
+    
+    // Logitech c910:
+    uvcControl.useCamera(0x046d,0x821, 0x02);
+    
+    // Microsoft Lifecam HD-3000:
+    //uvcControl.useCamera(0x045e,0x779, 0x00);
     uvcControl.setAutoExposure(false);
     controls = uvcControl.getCameraControls();
-    
-    cout << "3 & 0x00000100 = " << ((unsigned int)3 & 0x00000100) << "\n15 & 0x00000100 = " << ((unsigned int)15 & 0x00000100) << "\n15 & 0x00100000 = " << ((unsigned int)15 & 0x00100000) <<endl;
     
 }
 

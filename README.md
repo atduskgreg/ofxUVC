@@ -12,6 +12,8 @@ There is a good thread on UVC control on the OF forum: [here](http://forum.openf
 
 * Microsoft LifeCam HD-3000
 
+* Logitech C910
+
 ### Finding Your Camera's VendorId and DeviceId
 
 Apple's Developer Tools ship with USB Prober: /Developer/Applications/Utilities/USB Prober.app

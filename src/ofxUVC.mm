@@ -5,8 +5,8 @@ ofxUVC::ofxUVC(){
     cameraInited = false;
 }
 
-void ofxUVC::useCamera(int vendorId, int productId){
-	cameraControl = [[UVCCameraControl alloc] initWithVendorID:vendorId productID:productId];
+void ofxUVC::useCamera(int vendorId, int productId, int _interfaceNum){
+	cameraControl = [[UVCCameraControl alloc] initWithVendorID:vendorId productID:productId interfaceNum:_interfaceNum];
     cameraInited = true;
 }
 

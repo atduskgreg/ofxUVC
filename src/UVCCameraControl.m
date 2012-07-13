@@ -117,9 +117,11 @@ const uvc_controls_t uvc_controls = {
 }
 
 
-- (id)initWithVendorID:(long)vendorID productID:(long)productID {
+- (id)initWithVendorID:(long)vendorID productID:(long)productID interfaceNum:(long)interNum {
 	if( self = [super init] ) {
 		interface = NULL;
+        
+        interfaceNum = interNum;
 		
 		// Find USB Device
 		CFMutableDictionaryRef matchingDict = IOServiceMatching(kIOUSBDeviceClassName);
@@ -254,8 +256,8 @@ const uvc_controls_t uvc_controls = {
 	IOUSBDevRequest controlRequest;
 	controlRequest.bmRequestType = USBmakebmRequestType( kUSBOut, kUSBClass, kUSBInterface );
 	controlRequest.bRequest = UVC_SET_CUR;
-	controlRequest.wValue = (selector << 8) | 0x00;
-	controlRequest.wIndex = (unitId << 8) | 0x00;
+	controlRequest.wValue = (selector << 8) | interfaceNum;
+	controlRequest.wIndex = (unitId << 8) | interfaceNum;
 	controlRequest.wLength = length;
 	controlRequest.wLenDone = 0;
 	controlRequest.pData = &value;
@@ -268,8 +270,8 @@ const uvc_controls_t uvc_controls = {
 	IOUSBDevRequest controlRequest;
 	controlRequest.bmRequestType = USBmakebmRequestType( kUSBIn, kUSBClass, kUSBInterface );
 	controlRequest.bRequest = type;
-	controlRequest.wValue = (selector << 8) | 0x00;
-	controlRequest.wIndex = (unitId << 8) | 0x00;
+	controlRequest.wValue = (selector << 8) | interfaceNum;
+	controlRequest.wIndex = (unitId << 8) | interfaceNum;
 	controlRequest.wLength = length;
 	controlRequest.wLenDone = 0;
 	controlRequest.pData = &value;

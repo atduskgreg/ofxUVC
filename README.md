@@ -12,6 +12,12 @@ There is a good thread on UVC control on the OF forum: [here](http://forum.openf
 
 * Microsoft LifeCam HD-3000
 
+### Finding Your Camera's VendorId and DeviceId
+
+Apple's Developer Tools ship with USB Prober: /Developer/Applications/Utilities/USB Prober.app
+
+Launch USB Prober with your camera plugged in. Click the tab labeled "IORegistry". Find the IOUSBDevice for your camera and select it. Click the "Details" button, a pane will open off the top of the window. Scroll that pane until you find the "idProduct" and "idVendor" listings. You'll need those with the useCamera() function to connect to your camera.
+
 ### Thanks
 
 [Dominic Szablewski](http://www.phoboslab.org/)

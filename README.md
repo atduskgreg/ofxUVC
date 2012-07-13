@@ -15,3 +15,4 @@ There is a good thread on UVC control on the OF forum: [here](http://forum.openf
 ### Thanks
 
 [Dominic Szablewski](http://www.phoboslab.org/)
+[James George](http://jamesgeorge.org) (for help hiding Cocoa from C++)

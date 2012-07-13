@@ -5,7 +5,7 @@ void testApp::setup(){
 	vidGrabber.initGrabber(1280/2, 720/2);
     
     // Built-in iSight
-    //uvcControl.useCamera(0x5ac,0x8507, 0x02);
+    //uvcControl.useCamera(0x5ac,0x8507, 0x00);
 
     
     // Logitech c910:

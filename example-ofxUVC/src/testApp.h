@@ -25,5 +25,7 @@ class testApp : public ofBaseApp{
     ofxQTKitVideoGrabber	vidGrabber;	
     ofxUVC uvcControl;
     
+    float focus;
+    
     vector<ofxUVCControl> controls;
 };

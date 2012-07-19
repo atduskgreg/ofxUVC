@@ -1,0 +1,40 @@
+cameraToUse: 0
+cameras:
+- name: Microsoft LifeCam HD-3000
+  vendorId: 0x45e
+  productId: 0x779
+  interfaceNum: 0x00
+  # 1280x720 (this is 1/2 res)
+  width: 640
+  height: 360
+- name: Encore Electronics ENUCM-013
+  vendorId: 0x1e4e
+  productId: 0x103
+  interfaceNum: 0x00
+  width: 640
+  height: 480
+- name: Rosewill
+  vendorId : 0x603
+  productId: 0x8b08
+  interfaceNum: 0x00
+  width: 640
+  height: 480
+- name: Built-in iSight
+  vendorId : 0x5ac
+  productId: 0x8507
+  interfaceNum: 0x00
+  width: 640
+  height: 480
+- name: Logitech c910
+  vendorId : 0x046d
+  productId: 0x821
+  interfaceNum: 0x02
+  # 1280x720 (this is 1/2 res)
+  width: 640
+  height: 360
+- name: Logitech c6260
+  vendorId : 0x046d
+  productId: 0x81a
+  interfaceNum: 0x00
+  width: 640
+  height: 480

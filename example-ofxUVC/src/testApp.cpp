@@ -2,38 +2,27 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	vidGrabber.initGrabber(640*2, 480*2);
     
-    // Built-in iSight
-    //uvcControl.useCamera(0x5ac,0x8507, 0x00);
-
+    yaml.load("camera_settings.yml");
     
-    // Logitech c910:
-    //uvcControl.useCamera(0x046d,0x821, 0x02);
-
-    // Logitech c6260
-    //uvcControl.useCamera(0x046d,0x81a, 0x00);
+    int cameraToUse;
+    yaml.doc["cameraToUse"] >> cameraToUse;
     
-    // Rosewill
-    //uvcControl.useCamera(0x603,0x8b08, 0x00);
-
-    // Microsoft LifeCam-VX700
-    // correct vendorId and productId but no-worky
-    //uvcControl.useCamera(0x45e,0x770, 0x00);
-
-
-    // Encore Electronics ENUCM-013 (mysterious death sphere)
-    //uvcControl.useCamera(0x1e4e,0x103, 0x00);
-
-    // Inland
-    //uvcControl.useCamera(0xc45,0x6340, 0x03);
+    int vendorId, productId, interfaceNum;
+    yaml.doc["cameras"][cameraToUse]["vendorId"] >> vendorId;
+    yaml.doc["cameras"][cameraToUse]["productId"] >> productId;
+    yaml.doc["cameras"][cameraToUse]["interfaceNum"] >> interfaceNum;
+    yaml.doc["cameras"][cameraToUse]["name"] >> cameraName;
+    yaml.doc["cameras"][cameraToUse]["width"] >> camWidth;
+    yaml.doc["cameras"][cameraToUse]["height"] >> camHeight;
     
+    vidGrabber.initGrabber(camWidth, camHeight);
+
+       
     focus = 0.5;
     
-    // Microsoft Lifecam HD-3000:
-    uvcControl.useCamera(0x045e,0x779, 0x00);
- 
-    uvcControl.setAutoExposure(false);
+    uvcControl.useCamera(vendorId, productId, interfaceNum); 
+    uvcControl.setAutoExposure(true);
     controls = uvcControl.getCameraControls();
     
 }
@@ -47,13 +36,13 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     ofBackground(0);
-	vidGrabber.draw(0,0, 640, 480);
+	vidGrabber.draw(0,0, camWidth, camHeight);
     
     ofSetColor(255);
     stringstream s;
-    s << "Auto-exposure: " << uvcControl.getAutoExposure() << "\nAuto-focus: " << uvcControl.getAutoFocus() <<
+    s << "Camera name: " << cameraName << "\nAuto-exposure: " << uvcControl.getAutoExposure() << "\nAuto-focus: " << uvcControl.getAutoFocus() <<
     "\nAbsolute focus: " << uvcControl.getAbsoluteFocus() <<
-    "\nPress any key to toggle auto-exposure.\n\nResult of GET_STATUS for each feature\non this camera:\n";
+    "\nPress 'e' to toggle auto-exposure.\nPress 'f' to toggle auto-focus.\nPress +/- to set absolute foucs.\n\nResult of GET_STATUS for each feature\non this camera:\n";
         
     
     for(int i = 0; i < controls.size(); i++){

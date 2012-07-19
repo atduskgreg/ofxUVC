@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37769BA715B84E8400883999 /* yaml-cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37769BA115B84E8400883999 /* yaml-cpp.a */; };
+		37769BA815B84E8400883999 /* ofxYAML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37769BA315B84E8400883999 /* ofxYAML.cpp */; };
 		37C80F1015AF389E006065A2 /* ofxUVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 37C80F0D15AF389E006065A2 /* ofxUVC.mm */; };
 		37C80F1115AF389E006065A2 /* UVCCameraControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C80F0F15AF389E006065A2 /* UVCCameraControl.m */; };
 		37C80F3B15AF3CC8006065A2 /* ofxQTKitVideoGrabber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 37C80F3115AF3CC8006065A2 /* ofxQTKitVideoGrabber.mm */; };
@@ -62,6 +64,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37769B8615B84E8400883999 /* aliasmanager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aliasmanager.h; sourceTree = "<group>"; };
+		37769B8715B84E8400883999 /* anchor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = anchor.h; sourceTree = "<group>"; };
+		37769B8915B84E8400883999 /* anchordict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = anchordict.h; sourceTree = "<group>"; };
+		37769B8A15B84E8400883999 /* graphbuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphbuilder.h; sourceTree = "<group>"; };
+		37769B8B15B84E8400883999 /* conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conversion.h; sourceTree = "<group>"; };
+		37769B8C15B84E8400883999 /* dll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dll.h; sourceTree = "<group>"; };
+		37769B8D15B84E8400883999 /* emitfromevents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emitfromevents.h; sourceTree = "<group>"; };
+		37769B8E15B84E8400883999 /* emitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emitter.h; sourceTree = "<group>"; };
+		37769B8F15B84E8400883999 /* emittermanip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emittermanip.h; sourceTree = "<group>"; };
+		37769B9015B84E8400883999 /* eventhandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventhandler.h; sourceTree = "<group>"; };
+		37769B9115B84E8400883999 /* exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exceptions.h; sourceTree = "<group>"; };
+		37769B9215B84E8400883999 /* iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iterator.h; sourceTree = "<group>"; };
+		37769B9315B84E8400883999 /* ltnode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ltnode.h; sourceTree = "<group>"; };
+		37769B9415B84E8400883999 /* mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mark.h; sourceTree = "<group>"; };
+		37769B9515B84E8400883999 /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		37769B9615B84E8400883999 /* nodeimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nodeimpl.h; sourceTree = "<group>"; };
+		37769B9715B84E8400883999 /* nodereadimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nodereadimpl.h; sourceTree = "<group>"; };
+		37769B9815B84E8400883999 /* nodeutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nodeutil.h; sourceTree = "<group>"; };
+		37769B9915B84E8400883999 /* noncopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noncopyable.h; sourceTree = "<group>"; };
+		37769B9A15B84E8400883999 /* null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = null.h; sourceTree = "<group>"; };
+		37769B9B15B84E8400883999 /* ostream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ostream.h; sourceTree = "<group>"; };
+		37769B9C15B84E8400883999 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		37769B9D15B84E8400883999 /* stlemitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stlemitter.h; sourceTree = "<group>"; };
+		37769B9E15B84E8400883999 /* stlnode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stlnode.h; sourceTree = "<group>"; };
+		37769B9F15B84E8400883999 /* traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = traits.h; sourceTree = "<group>"; };
+		37769BA015B84E8400883999 /* yaml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yaml.h; sourceTree = "<group>"; };
+		37769BA115B84E8400883999 /* yaml-cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "yaml-cpp.a"; sourceTree = "<group>"; };
+		37769BA315B84E8400883999 /* ofxYAML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxYAML.cpp; sourceTree = "<group>"; };
+		37769BA415B84E8400883999 /* ofxYAML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxYAML.h; sourceTree = "<group>"; };
 		37C80F0C15AF389E006065A2 /* ofxUVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxUVC.h; sourceTree = "<group>"; };
 		37C80F0D15AF389E006065A2 /* ofxUVC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxUVC.mm; sourceTree = "<group>"; };
 		37C80F0E15AF389E006065A2 /* UVCCameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVCCameraControl.h; sourceTree = "<group>"; };
@@ -116,12 +147,82 @@
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
+				37769BA715B84E8400883999 /* yaml-cpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37769B7315B84E8400883999 /* ofxYAML */ = {
+			isa = PBXGroup;
+			children = (
+				37769B8415B84E8400883999 /* libs */,
+				37769BA215B84E8400883999 /* src */,
+			);
+			name = ofxYAML;
+			path = ../../ofxYAML;
+			sourceTree = "<group>";
+		};
+		37769B8415B84E8400883999 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				37769B8515B84E8400883999 /* include */,
+				37769BA115B84E8400883999 /* yaml-cpp.a */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		37769B8515B84E8400883999 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				37769B8615B84E8400883999 /* aliasmanager.h */,
+				37769B8715B84E8400883999 /* anchor.h */,
+				37769B8815B84E8400883999 /* contrib */,
+				37769B8B15B84E8400883999 /* conversion.h */,
+				37769B8C15B84E8400883999 /* dll.h */,
+				37769B8D15B84E8400883999 /* emitfromevents.h */,
+				37769B8E15B84E8400883999 /* emitter.h */,
+				37769B8F15B84E8400883999 /* emittermanip.h */,
+				37769B9015B84E8400883999 /* eventhandler.h */,
+				37769B9115B84E8400883999 /* exceptions.h */,
+				37769B9215B84E8400883999 /* iterator.h */,
+				37769B9315B84E8400883999 /* ltnode.h */,
+				37769B9415B84E8400883999 /* mark.h */,
+				37769B9515B84E8400883999 /* node.h */,
+				37769B9615B84E8400883999 /* nodeimpl.h */,
+				37769B9715B84E8400883999 /* nodereadimpl.h */,
+				37769B9815B84E8400883999 /* nodeutil.h */,
+				37769B9915B84E8400883999 /* noncopyable.h */,
+				37769B9A15B84E8400883999 /* null.h */,
+				37769B9B15B84E8400883999 /* ostream.h */,
+				37769B9C15B84E8400883999 /* parser.h */,
+				37769B9D15B84E8400883999 /* stlemitter.h */,
+				37769B9E15B84E8400883999 /* stlnode.h */,
+				37769B9F15B84E8400883999 /* traits.h */,
+				37769BA015B84E8400883999 /* yaml.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		37769B8815B84E8400883999 /* contrib */ = {
+			isa = PBXGroup;
+			children = (
+				37769B8915B84E8400883999 /* anchordict.h */,
+				37769B8A15B84E8400883999 /* graphbuilder.h */,
+			);
+			path = contrib;
+			sourceTree = "<group>";
+		};
+		37769BA215B84E8400883999 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				37769BA315B84E8400883999 /* ofxYAML.cpp */,
+				37769BA415B84E8400883999 /* ofxYAML.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		37C80F0A15AF389E006065A2 /* ofxUVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +266,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				37769B7315B84E8400883999 /* ofxYAML */,
 				37C80F1815AF3CC8006065A2 /* ofxQTKitVideoGrabber */,
 				37C80F0A15AF389E006065A2 /* ofxUVC */,
 			);
@@ -338,6 +440,7 @@
 				37C80F1015AF389E006065A2 /* ofxUVC.mm in Sources */,
 				37C80F1115AF389E006065A2 /* UVCCameraControl.m in Sources */,
 				37C80F3B15AF3CC8006065A2 /* ofxQTKitVideoGrabber.mm in Sources */,
+				37769BA815B84E8400883999 /* ofxYAML.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +600,9 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../ofxYAML/libs\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "example-ofxUVCDebug";
 				WRAPPER_EXTENSION = app;
@@ -583,7 +688,9 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../ofxYAML/libs\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "example-ofxUVC";
 				WRAPPER_EXTENSION = app;

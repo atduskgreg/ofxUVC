@@ -3,6 +3,20 @@
 #include "ofMain.h"
 #include "ofxUVC.h"
 #include "ofxQTKitVideoGrabber.h"
+#include "ofxYAML.h"
+
+/*
+struct ofxUVCCameraSetting {
+    int vendorId, productId, interfaceNum;
+    string name;
+};
+
+void operator >> (const YAML::Node& node, ofxUVCCameraSetting& cam) {
+    node["vendorId"] >> cam.vendorId;
+    node["productId"] >> cam.productId;
+    node["interfaceNum"] >> cam.interfaceNum;
+    node["name"] >> cam.name;
+}*/
 
 class testApp : public ofBaseApp{
 	public:
@@ -24,6 +38,10 @@ class testApp : public ofBaseApp{
     
     ofxQTKitVideoGrabber	vidGrabber;	
     ofxUVC uvcControl;
+    ofxYAML yaml;
+    string cameraName;
+    
+    int camWidth, camHeight;
     
     float focus;
     

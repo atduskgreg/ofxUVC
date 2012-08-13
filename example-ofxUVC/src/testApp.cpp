@@ -17,7 +17,17 @@ void testApp::setup(){
     yaml.doc["cameras"][cameraToUse]["height"] >> camHeight;
     
     vidGrabber.initGrabber(camWidth, camHeight);
+    
+    int deviceId = 0;
+    vector<string> availableCams = vidGrabber.listVideoDevices();
 
+    for(int i = 0; i < availableCams.size(); i++){
+        if(availableCams.at(i) == cameraName){
+            deviceId = i;
+        }
+    }
+    
+    vidGrabber.setDeviceID(deviceId);
        
     focus = 0.5;
     

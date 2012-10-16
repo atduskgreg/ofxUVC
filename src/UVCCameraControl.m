@@ -370,7 +370,7 @@ const uvc_controls_t uvc_controls = {
 }
 
 - (uvc_controls_t *) getControls{
-    return &uvc_controls;
+    return (uvc_controls_t *)&uvc_controls;
 }
 
 

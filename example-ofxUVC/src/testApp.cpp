@@ -40,13 +40,17 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
     vidGrabber.update();
+    if(vidGrabber.isFrameNew())
+    {
+        tex.loadData(vidGrabber.getPixelsRef());
+    }
     controls = uvcControl.getCameraControls();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
     ofBackground(0);
-//	vidGrabber.draw(0,0, camWidth, camHeight);
+    tex.draw(0,0, camWidth, camHeight);
 
     ofSetColor(255);
     stringstream s;

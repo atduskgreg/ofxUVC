@@ -36,7 +36,10 @@ class testApp : public ofBaseApp{
     
     void exit();
     
-    ofQTKitGrabber	vidGrabber;	
+    ofQTKitGrabber	vidGrabber;
+
+    ofTexture tex;
+
     ofxUVC uvcControl;
     ofxYAML yaml;
     string cameraName;

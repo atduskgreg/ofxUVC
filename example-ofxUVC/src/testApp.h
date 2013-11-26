@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxUVC.h"
-#include "ofxQTKitVideoGrabber.h"
+//#include "ofxQTKitVideoGrabber.h"
 #include "ofxYAML.h"
 
 /*
@@ -36,7 +36,10 @@ class testApp : public ofBaseApp{
     
     void exit();
     
-    ofxQTKitVideoGrabber	vidGrabber;	
+    ofQTKitGrabber	vidGrabber;
+
+    ofTexture tex;
+
     ofxUVC uvcControl;
     ofxYAML yaml;
     string cameraName;

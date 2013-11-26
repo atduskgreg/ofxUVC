@@ -80,7 +80,7 @@ void ofxUVC::setBrightness(float value){
     [cameraControl setBrightness:value];
 }
 
-bool ofxUVC::getBrightness(){
+float ofxUVC::getBrightness(){
     return [cameraControl getBrightness];
 }
 

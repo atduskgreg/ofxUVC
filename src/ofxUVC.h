@@ -1,4 +1,3 @@
-
 #pragma once 
 
 
@@ -55,7 +54,7 @@ class ofxUVC {
     void setGain(float value);
     float getGain();
     void setBrightness(float value);
-    bool getBrightness();
+    float getBrightness();
     void setContrast(float value);
     float getContrast();
     void setSaturation(float value);

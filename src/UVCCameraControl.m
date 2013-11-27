@@ -84,7 +84,7 @@ const uvc_controls_t uvc_controls = {
 		IOServiceGetMatchingServices( kIOMasterPortDefault, matchingDict, &serviceIterator );
 		
 		io_service_t camera;
-		while( camera = IOIteratorNext(serviceIterator) ) {
+		while( (camera = IOIteratorNext(serviceIterator)) ) {
 			// Get DeviceInterface
 			IOUSBDeviceInterface **deviceInterface = NULL;
 			IOCFPlugInInterface	**plugInInterface = NULL;
@@ -179,7 +179,7 @@ const uvc_controls_t uvc_controls = {
 	HRESULT result;
 	
 	
-	if( usbInterface = IOIteratorNext(interfaceIterator) ) {
+	if( (usbInterface = IOIteratorNext(interfaceIterator)) ) {
 		IOCFPlugInInterface **plugInInterface = NULL;
 		
 		//Create an intermediate plug-in
@@ -281,7 +281,7 @@ const uvc_controls_t uvc_controls = {
 
 
 // Get Range (min, max)
-- (uvc_range_t)getRangeForControl:(uvc_control_info_t *)control {
+- (uvc_range_t)getRangeForControl:(const uvc_control_info_t *)control {
 	uvc_range_t range = { 0, 0 };
 	range.min = [self getDataFor:UVC_GET_MIN withLength:control->size fromSelector:control->selector at:control->unit];
 	range.max = [self getDataFor:UVC_GET_MAX withLength:control->size fromSelector:control->selector at:control->unit];
@@ -296,7 +296,7 @@ const uvc_controls_t uvc_controls = {
 
 
 // Get a normalized value
-- (float)getValueForControl:(uvc_control_info_t *)control {
+- (float)getValueForControl:(const uvc_control_info_t *)control {
 	// TODO: Cache the range somewhere?
 	uvc_range_t range = [self getRangeForControl:control];
 	
@@ -306,7 +306,7 @@ const uvc_controls_t uvc_controls = {
 
 
 // Set a normalized value
-- (BOOL)setValue:(float)value forControl:(uvc_control_info_t *)control {
+- (BOOL)setValue:(float)value forControl:(const uvc_control_info_t *)control {
 	// TODO: Cache the range somewhere?
 	uvc_range_t range = [self getRangeForControl:control];
 	

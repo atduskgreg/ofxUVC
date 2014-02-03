@@ -128,8 +128,8 @@ vector<ofxUVCControl> ofxUVC::getCameraControls(){
     result.push_back(exposure);
     
 	ofxUVCControl absoluteFocus;
-    absoluteFocus.name = "absoluteFocus";
-    absoluteFocus.status = [cameraControl getInfoForControl:&[cameraControl getControls]->absoluteFocus];
+    absoluteFocus.status = [cameraControl getInfoForControl:&[cameraControl getControls]->focus];
+    //absoluteFocus.status = [cameraControl getInfoForControl:&[cameraControl getControls]->absoluteFocus];
     result.push_back(absoluteFocus);
 
 	ofxUVCControl focus;

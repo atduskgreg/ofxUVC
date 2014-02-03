@@ -1,4 +1,4 @@
-cameraToUse: 0
+cameraToUse: 7
 cameras:
 - name: Microsoft LifeCam HD-5000
   vendorId: 0x45e
@@ -45,3 +45,10 @@ cameras:
   interfaceNum: 0x00
   width: 640
   height: 480
+- name: Logitech c615
+  vendorId : 0x46d
+  productId: 0x82c
+  interfaceNum: 0x02
+  # Video Capture (4:3 SD) 320 x 240, 640 x 480, Video Capture (16:9 W) 360P, 480P, 720P, 1080P
+  width: 480
+  height: 360

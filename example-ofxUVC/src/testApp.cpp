@@ -3,20 +3,24 @@
 //--------------------------------------------------------------
 void testApp::setup(){
     
-    yaml.load("camera_settings.yml");
+    //yaml.load("camera_settings.yml");
     
     int cameraToUse;
-    yaml.doc["cameraToUse"] >> cameraToUse;
+    //yaml.doc["cameraToUse"] >> cameraToUse;
     
-    int vendorId, productId, interfaceNum;
-    yaml.doc["cameras"][cameraToUse]["vendorId"] >> vendorId;
-    yaml.doc["cameras"][cameraToUse]["productId"] >> productId;
-    yaml.doc["cameras"][cameraToUse]["interfaceNum"] >> interfaceNum;
-    yaml.doc["cameras"][cameraToUse]["name"] >> cameraName;
-    yaml.doc["cameras"][cameraToUse]["width"] >> camWidth;
-    yaml.doc["cameras"][cameraToUse]["height"] >> camHeight;
+    // CHECK bin/data/camera_settings.yaml for some proper values
+    int vendorId = 0x46d, productId = 0x821, interfaceNum = 0x2;
+    cameraName = "Logitech Camera #2";
+    camWidth = 640;
+    camHeight = 360;
+    //yaml.doc["cameras"][cameraToUse]["vendorId"] >> vendorId;
+    //yaml.doc["cameras"][cameraToUse]["productId"] >> productId;
+    //yaml.doc["cameras"][cameraToUse]["interfaceNum"] >> interfaceNum;
+    //yaml.doc["cameras"][cameraToUse]["name"] >> cameraName;
+    //yaml.doc["cameras"][cameraToUse]["width"] >> camWidth;
+    //yaml.doc["cameras"][cameraToUse]["height"] >> camHeight;
     
-    vidGrabber.initGrabber(camWidth, camHeight);
+    vidGrabber.setup(camWidth, camHeight);
     
     int deviceId = 0;
     vector<string> availableCams = vidGrabber.listVideoDevices();
@@ -29,7 +33,7 @@ void testApp::setup(){
     
     vidGrabber.setDeviceID(deviceId);
        
-    focus = 0.5;
+    focus = 0.1;
     
     uvcControl.useCamera(vendorId, productId, interfaceNum); 
     uvcControl.setAutoExposure(true);
@@ -42,7 +46,7 @@ void testApp::update(){
     vidGrabber.update();
     if(vidGrabber.isFrameNew())
     {
-        tex.loadData(vidGrabber.getPixelsRef());
+        tex.loadData(vidGrabber.getPixels());
     }
     controls = uvcControl.getCameraControls();
 }

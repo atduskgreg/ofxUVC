@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxUVC.h"
 //#include "ofxQTKitVideoGrabber.h"
-#include "ofxYAML.h"
+//#include "ofxYAML.h"
 
 /*
 struct ofxUVCCameraSetting {
@@ -41,7 +41,7 @@ class testApp : public ofBaseApp{
     ofTexture tex;
 
     ofxUVC uvcControl;
-    ofxYAML yaml;
+    //ofxYAML yaml;
     string cameraName;
     
     int camWidth, camHeight;
